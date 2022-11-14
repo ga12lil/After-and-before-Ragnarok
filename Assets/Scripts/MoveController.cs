@@ -8,6 +8,8 @@ public class MoveController : MonoBehaviour
     public float Maxspeed = 0.2f;
     float speed = 0f;
     bool LookRight = true;
+    public PlayerAnimController ac;
+    bool IsRun = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +25,21 @@ public class MoveController : MonoBehaviour
             Flip();
         if ((dx != 0 || dy != 0))
         {
+            if (!IsRun)
+            {
+                ac.SetRunAnim();
+                IsRun = true;
+            }
             if (speed < Maxspeed)
                 speed += 0.005f;
         }
         else
         {
+            if (IsRun)
+            {
+                ac.SetStayAnim();
+                IsRun = false;
+            }
             if (speed > 0)
                 speed -= 0.005f;
         }
