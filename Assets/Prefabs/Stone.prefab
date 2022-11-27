@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 08f9099bfb9fe6c4f9e23dc5d78022a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -116,4 +116,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvObj: {fileID: 7521412521103609740, guid: 6178b6dee31ec8b4996acf96a9057700, type: 3}
   inv: {fileID: 0}
-  invUI: {fileID: 0}
