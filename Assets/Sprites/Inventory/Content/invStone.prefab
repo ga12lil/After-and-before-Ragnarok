@@ -175,6 +175,7 @@ MonoBehaviour:
   MaxInStack: 10
   Count: 0
   invOrder: 0
+  OriginalItem: {fileID: 6790671017949746951, guid: e6c6771d3d1902d4baf66682571e85ca, type: 3}
 --- !u!225 &-2297783196836762946
 CanvasGroup:
   m_ObjectHideFlags: 0

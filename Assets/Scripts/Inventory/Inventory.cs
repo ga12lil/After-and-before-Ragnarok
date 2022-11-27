@@ -69,4 +69,10 @@ public class Inventory : MonoBehaviour
 
         invUI.UpdateInv();
     }
+
+
+    public void DropAwayItem(int ItemOrder)
+    {
+        list[ItemOrder] = null;
+    }
 }

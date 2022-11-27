@@ -95,6 +95,7 @@ MonoBehaviour:
   MaxInStack: 10
   Count: 0
   invOrder: 0
+  OriginalItem: {fileID: 7325020640018333052, guid: d1adf3c879e6dba49b823306b710c8db, type: 3}
 --- !u!225 &7295556203074019241
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class Item : MonoBehaviour, IEndDragHandler, IDragHandler , IBeginDragHan
     private RectTransform rt;
     private GameObject inv;
     private CanvasGroup cg;
+    public GameObject OriginalItem;
 
     void Awake()
     {
@@ -54,5 +55,9 @@ public class Item : MonoBehaviour, IEndDragHandler, IDragHandler , IBeginDragHan
     {
         cg.blocksRaycasts = false;
         gameObject.transform.SetParent(canvas.transform);
+    }
+    public void DestroyItem()
+    {
+        Destroy(gameObject);
     }
 }
