@@ -114,6 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0a465a131b500418951055e433d0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvObj: {fileID: 2027744543107174197, guid: 6178b6dee31ec8b4996acf96a9057700, type: 3}
+  InvObj: {fileID: 7521412521103609740, guid: 6178b6dee31ec8b4996acf96a9057700, type: 3}
   inv: {fileID: 0}
   invUI: {fileID: 0}
