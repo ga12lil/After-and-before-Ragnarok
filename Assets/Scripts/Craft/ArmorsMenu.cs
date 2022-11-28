@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ArmorsMenu : MonoBehaviour
 {
     public GameObject craftmenu;
+    public GameObject Canvas;
     public bool FlagOpenCraftMenu = false;
 
     public void OpenCraftMenu()
