@@ -6,6 +6,7 @@ public class ResourceCollector : MonoBehaviour
 {
     public GameObject InvObj;
     public Inventory inv;
+    public bool InContact = false;
     
 
     private void Start()
@@ -16,8 +17,27 @@ public class ResourceCollector : MonoBehaviour
     {
         if(other.name == "player")
         {
-            inv.AddInInventory(InvObj);
-            Destroy(gameObject);
+            InContact = true;
+            
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "player")
+        {
+            InContact = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (InContact)
+            {
+                inv.AddInInventory(InvObj);
+                Destroy(gameObject);
+            }
         }
     }
 }
