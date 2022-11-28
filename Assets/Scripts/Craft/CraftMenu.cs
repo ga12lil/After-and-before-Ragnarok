@@ -8,7 +8,11 @@ public class CraftMenu : MonoBehaviour
 
     public GameObject craftmenu;
     public bool FlagOpenCraftMenu=false;
-
+    public bool FlagOpenToolsMenu = false;
+    public bool FlagOpenWeaponsMenu = false;
+    public bool FlagOpenArmorsMenu = false;
+    public bool FlagOpenBuildingsMenu = false;
+    public bool FlagOpenOthersMenu = false;
 
     // Start is called before the first frame update
     void Start()
