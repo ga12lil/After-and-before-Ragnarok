@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Crafting : MonoBehaviour
 {
-    public Inventory invUI;
+    public Inventory inv;
+
+
+    
 
 
 }
