@@ -15,6 +15,7 @@ public class InventoryUI : MonoBehaviour
                 continue;
             inv.list[i].gameObject.transform.SetParent(gameObject.transform.GetChild(i));
             inv.list[i].gameObject.transform.localPosition = new Vector3(0, 0, 0);
+            inv.list[i].gameObject.transform.localScale = gameObject.transform.GetChild(i).localScale;
         }
     }
 
