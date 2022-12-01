@@ -75,4 +75,68 @@ public class Inventory : MonoBehaviour
     {
         list[ItemOrder] = null;
     }
+
+
+
+    //####################################################################
+    public int SearchItemsInInventory(Item item)
+    {
+        int count = 0;
+        foreach (Item i in list)
+        {
+            if ((i != null) && (i.id == item.id))
+            {
+                count += i.Count;
+            }
+        }
+        return count;
+    }
+    public void RemoveItemFromInventory(Item item, int count)
+    {
+
+        int CurCount = 0;
+        if (SearchItemsInInventory(item) >= count)
+        {
+            while (CurCount != count)
+            {
+                int minI = FindMinimalItem(item);
+                if (list[minI].Count + CurCount <= count)
+                {
+                    CurCount += list[minI].Count;
+                    list[minI].GetComponent<Item>().DestroyItem();
+                    DropAwayItem(minI);
+                    invUI.UpdateInv();
+                }
+                else
+                {
+                    list[minI].Count -= (count - CurCount);
+                    CurCount = count;
+                    
+                    invUI.UpdateInv();
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("No much res!");
+        }
+    }
+    private int FindMinimalItem(Item item)
+    {
+        int minCount = 999;
+        int minOrder = -1;
+        foreach (Item i in list)
+        {
+            if ((i != null) && (i.id == item.id))
+            {
+                if (i.Count < minCount)
+                {
+                    minCount = i.Count;
+                    minOrder = i.invOrder;
+                }
+            }
+        }
+        Debug.Log(minOrder);
+        return minOrder;
+    }
 }
