@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6790671017949746951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.97, y: -0.91, z: 0}
+  m_LocalPosition: {x: -2.018, y: -0.878, z: 0}
   m_LocalScale: {x: 0.25728345, y: 0.27828345, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!58 &9044103095190546250
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.081548475, y: 0}
+  m_Offset: {x: 0.08154801, y: 1.6543652}
   serializedVersion: 2
-  m_Radius: 4.0832815
+  m_Radius: 4.0976677
 --- !u!114 &4300643406079562277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,3 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvObj: {fileID: 7521412521103609740, guid: 6178b6dee31ec8b4996acf96a9057700, type: 3}
   inv: {fileID: 0}
+  InContact: 0

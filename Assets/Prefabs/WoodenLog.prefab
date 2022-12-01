@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!58 &1701880037344383555
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.039356902, y: 0}
+  m_Offset: {x: 0.12454082, y: 1.3924116}
   serializedVersion: 2
-  m_Radius: 4.9396086
+  m_Radius: 4.3311586
 --- !u!114 &8410242076629028053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,3 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvObj: {fileID: 5861721941274239782, guid: d6e59a31fa0f4214a89a9ccc3a425aab, type: 3}
   inv: {fileID: 0}
+  InContact: 0
