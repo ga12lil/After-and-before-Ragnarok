@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8036385248037002274}
   - component: {fileID: 7295556203074019241}
   m_Layer: 5
-  m_Name: InvWoodenLog
+  m_Name: (id=1)InvWoodenLog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

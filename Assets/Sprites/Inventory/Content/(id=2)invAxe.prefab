@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 629604939349001775}
   - component: {fileID: -2297783196836762946}
   m_Layer: 5
-  m_Name: invAxe
+  m_Name: (id=2)invAxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

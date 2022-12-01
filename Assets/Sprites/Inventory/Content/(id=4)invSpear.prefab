@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 629604939349001775}
   - component: {fileID: -2297783196836762946}
   m_Layer: 5
-  m_Name: invPickAxe
+  m_Name: (id=4)invSpear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a68bc1b98aaceb4aac644c7d266e458, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e98503e426c560d419f1ebb5168ab1bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -171,11 +171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4973fc1e29f09704b9a95879cd134935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
+  id: 4
   MaxInStack: 1
   Count: 0
   invOrder: 0
-  OriginalItem: {fileID: 6790671017949746951, guid: 895c8be7de79b6247bbac23f02a4db8e, type: 3}
+  OriginalItem: {fileID: 6790671017949746951, guid: d867dd2e2ed766a40bec5425691a74bc, type: 3}
 --- !u!225 &-2297783196836762946
 CanvasGroup:
   m_ObjectHideFlags: 0
