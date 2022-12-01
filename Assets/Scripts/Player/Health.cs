@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int curHealth = 0;
-    public int maxHealth = 100;
+    public float curHealth = 0;
+    public float maxHealth = 100;
 
-    public HealthBar healthBar;
+    private float secondsToEmptyHealth = 10f;
 
     void Start()
     {
@@ -16,15 +16,28 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        Food food = gameObject.GetComponentInParent(typeof(Food)) as Food;
+        if ((food.curFood <= 0) && (curHealth > 0))
         {
-            DamagePlayer(10);
+            Damage(maxHealth / secondsToEmptyHealth * Time.deltaTime);
+            Debug.Log("Health");
+
+            if (curHealth <= 0)
+                Debug.Log("Death");
         }
     }
 
-    public void DamagePlayer(int damage)
+    public void Heal(float damage)
+    {
+        curHealth += damage;
+        if (curHealth > maxHealth)
+            curHealth = maxHealth;
+    }
+
+    public void Damage(float damage)
     {
         curHealth -= damage;
-        healthBar.SetHealth(curHealth);
+        if (curHealth < 0)
+            curHealth = 0;
     }
 }

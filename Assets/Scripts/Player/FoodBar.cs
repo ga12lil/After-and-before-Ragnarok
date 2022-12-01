@@ -16,7 +16,12 @@ public class FoodBar : MonoBehaviour
         foodBar.value = playerFood.maxFood;
     }
 
-    public void SetFood(int food)
+    void Update()
+    {
+        SetFood(playerFood.curFood);
+    }
+
+    public void SetFood(float food)
     {
         foodBar.value = food;
     }
