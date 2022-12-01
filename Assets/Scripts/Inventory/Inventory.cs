@@ -6,6 +6,9 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<Item> list = new List<Item>();
+    public Item InHand;
+    public Item InArmor;
+    public Item InHead;
     public InventoryUI invUI;
 
     private void Start()
