@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 529826136631511707}
   - component: {fileID: 529826136631511704}
   - component: {fileID: 529826136631511706}
+  - component: {fileID: 4779024851301693047}
+  - component: {fileID: 6210061207369674319}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -114,3 +116,56 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &4779024851301693047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529826136631511705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf900e87826fcb948a7da8e795577d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inv: {fileID: 0}
+  NeedEquip: 2
+  NeedDamage: 5
+  HP: 5000
+  Contact: 0
+  CanMine: 0
+  FarmRes:
+  - {fileID: 6790671017949746951, guid: e6c6771d3d1902d4baf66682571e85ca, type: 3}
+  - {fileID: 6790671017949746951, guid: e6c6771d3d1902d4baf66682571e85ca, type: 3}
+  - {fileID: 6790671017949746951, guid: e6c6771d3d1902d4baf66682571e85ca, type: 3}
+  - {fileID: 6790671017949746951, guid: e6c6771d3d1902d4baf66682571e85ca, type: 3}
+  - {fileID: 6790671017949746951, guid: e6c6771d3d1902d4baf66682571e85ca, type: 3}
+  cursorTexture: {fileID: 2800000, guid: 6e09e7e1f722c12438b5e5aeb1e01a72, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+--- !u!61 &6210061207369674319
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529826136631511705}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.020366669, y: 0.9767301}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 2.1299999, z: 0, w: 2.71}
+    pivot: {x: 0.501462, y: 0.25584802}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.659033, y: 5.1661925}
+  m_EdgeRadius: 0
