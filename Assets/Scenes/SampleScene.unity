@@ -2404,6 +2404,7 @@ GameObject:
   - component: {fileID: 435270175}
   - component: {fileID: 435270177}
   - component: {fileID: 435270176}
+  - component: {fileID: 435270178}
   m_Layer: 5
   m_Name: invHand
   m_TagString: Untagged
@@ -2469,6 +2470,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435270174}
   m_CullTransparentMesh: 1
+--- !u!114 &435270178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435270174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb964a5030e9dbc4884c3b995f9ccb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inv: {fileID: 509093376}
+  invUI: {fileID: 509093375}
 --- !u!1 &444029675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,6 +3297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inv: {fileID: 509093376}
+  HandSlot: {fileID: 435270174}
 --- !u!114 &509093376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3295,6 +3311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list: []
+  InHand: {fileID: 0}
+  InArmor: {fileID: 0}
+  InHead: {fileID: 0}
   invUI: {fileID: 509093375}
 --- !u!114 &509093377
 MonoBehaviour:

@@ -109,7 +109,8 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2e4290b4c92469b4384ea2b21ff42a0f, type: 3}
     - target: {fileID: 7521412521103609740, guid: 5821b4328b3c3a44aa385f995480c0b5, type: 3}
       propertyPath: m_Name
-      value: (id=5)invStick Variant
+      value: (id=5)invStick
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5804109598165927552, guid: 5821b4328b3c3a44aa385f995480c0b5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5821b4328b3c3a44aa385f995480c0b5, type: 3}

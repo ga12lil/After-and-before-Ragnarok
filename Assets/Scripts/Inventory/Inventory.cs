@@ -52,21 +52,46 @@ public class Inventory : MonoBehaviour
     
     public void SwitchItems(int i1, int i2)
     {
-        if(list[i2] == null)
+        if (i1 >= 0)
         {
-            list[i2] = list[i1];
-            list[i1] = null;
-            list[i2].invOrder = i2;
-        }
-        else
-        {
-            Debug.Log(list[i2] == null);
-            
-            (list[i1], list[i2]) = (list[i2], list[i1]);
-            list[i1].invOrder = i1;
-            list[i2].invOrder = i2;
+            if (list[i2] == null)
+            {
+                list[i2] = list[i1];
+                list[i1] = null;
+                list[i2].invOrder = i2;
+            }
+            else
+            {
+                (list[i1], list[i2]) = (list[i2], list[i1]);
+                list[i1].invOrder = i1;
+                list[i2].invOrder = i2;
 
+            }
         }
+        if(i1 == -1)
+        {
+            if (list[i2] == null)
+            {
+                list[i2] = InHand;
+                InHand = null;
+                list[i2].invOrder = i2;
+            }
+            else
+            {
+                Equipment eq;
+                if(list[i2].TryGetComponent<Equipment>(out eq))
+                {
+                    (InHand, list[i2]) = (list[i2], InHand);
+                    list[i2].invOrder = i2;
+                    InHand.invOrder = -1;
+                }
+                else
+                {
+                    
+                }
+            }
+        }
+        
         
 
 
