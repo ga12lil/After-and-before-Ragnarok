@@ -101,7 +101,10 @@ public class Inventory : MonoBehaviour
 
     public void DropAwayItem(int ItemOrder)
     {
-        list[ItemOrder] = null;
+        if (ItemOrder > 0)
+            list[ItemOrder] = null;
+        else if (ItemOrder == -1)
+            InHand = null;
     }
 
 

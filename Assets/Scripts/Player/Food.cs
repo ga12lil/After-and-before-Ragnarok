@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    public int curFood = 0;
-    public int maxFood = 100;
+    public float curFood = 0;
+    public float maxFood = 180;
 
-    public FoodBar foodBar;
+    private float secondsToEmptyFood = 100f;
 
     void Start()
     {
@@ -16,15 +16,24 @@ public class Food : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (curFood > 0)
         {
-            FeedPlayer(2);
+            Hunger(maxFood / secondsToEmptyFood * Time.deltaTime);
+            Debug.Log("Food");
         }
     }
 
-    public void FeedPlayer(int food)
+    public void Feed(float food)
     {
+        curFood += food;
+        if (curFood > maxFood)
+            curFood = maxFood;
+    }
+
+    public void Hunger(float food)
+    {
+        if (curFood < 0)
+            curFood = 0;
         curFood -= food;
-        foodBar.SetFood(curFood);
     }
 }
