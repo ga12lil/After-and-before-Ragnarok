@@ -116,3 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvObj: {fileID: 7521412521103609740, guid: 5f2b6825e96231b41a22305c54993a57, type: 3}
   inv: {fileID: 0}
+  InContact: 0

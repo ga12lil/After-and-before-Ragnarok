@@ -18,7 +18,7 @@ public class ResourceCollector : MonoBehaviour
         if(other.name == "player")
         {
             InContact = true;
-            
+            //gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -26,6 +26,7 @@ public class ResourceCollector : MonoBehaviour
         if (collision.name == "player")
         {
             InContact = false;
+            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 
