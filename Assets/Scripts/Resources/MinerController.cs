@@ -11,11 +11,13 @@ public class MinerController : MonoBehaviour
     public bool Contact;
     public bool CanMine;
     public List<GameObject> FarmRes;
+    public GameObject Miner;
     
 
     public void Awake()
     {
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+        Miner = GameObject.Find("player").GetComponent<MoveController>().MinerA;
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -40,16 +42,22 @@ public class MinerController : MonoBehaviour
             {
                 if(NeedDamage <= eq.Damage)
                 {
+                    Miner.SetActive(true);
                     HP-= eq.Damage;
                 }
             }
         }
+    }
+    public void OnMouseUp()
+    {
+        Miner.SetActive(false);
     }
     
     public void FixedUpdate()
     {
         if(HP <= 0)
         {
+            Miner.SetActive(false);
             System.Random rand = new System.Random();
             foreach (var i in FarmRes)
             {

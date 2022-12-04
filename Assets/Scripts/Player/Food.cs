@@ -19,7 +19,6 @@ public class Food : MonoBehaviour
         if (curFood > 0)
         {
             Hunger(maxFood / secondsToEmptyFood * Time.deltaTime);
-            Debug.Log("Food");
         }
     }
 

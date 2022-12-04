@@ -20,7 +20,6 @@ public class Health : MonoBehaviour
         if ((food.curFood <= 0) && (curHealth > 0))
         {
             Damage(maxHealth / secondsToEmptyHealth * Time.deltaTime);
-            Debug.Log("Health");
 
             if (curHealth <= 0)
                 Debug.Log("Death");
