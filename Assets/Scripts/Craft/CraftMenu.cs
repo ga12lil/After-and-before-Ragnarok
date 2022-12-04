@@ -27,7 +27,17 @@ public class CraftMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            if (!FlagOpenCraftMenu)
+            {
+                OpenCraftMenu();
+            }
+            else
+            {
+                CloseCraftMenu();
+            }
+        }
     }
 
     public void OpenCraftMenu()
@@ -172,6 +182,22 @@ public class CraftMenu : MonoBehaviour
             FlagOpenBuildingsMenu = false;
             FlagOpenOthersMenu = false;
         }
+    }
+
+    public void CloseCraftMenu()
+    {
+        craftmenu.SetActive(false);
+        toolsmenu.SetActive(false);
+        weaponsmenu.SetActive(false);
+        armorsmenu.SetActive(false);
+        buildingsmenu.SetActive(false);
+        othersmenu.SetActive(false);
+        FlagOpenCraftMenu = false;
+        FlagOpenToolsMenu = false;
+        FlagOpenWeaponsMenu = false;
+        FlagOpenArmorsMenu = false;
+        FlagOpenBuildingsMenu = false;
+        FlagOpenOthersMenu = false;
     }
 
 }
