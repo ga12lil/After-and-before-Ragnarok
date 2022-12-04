@@ -7,6 +7,8 @@ public class ResourceCollector : MonoBehaviour
     public GameObject InvObj;
     public Inventory inv;
     public bool InContact = false;
+    public GameObject EkeyPrefab;
+    public GameObject Ekey;
     
 
     private void Start()
@@ -18,7 +20,7 @@ public class ResourceCollector : MonoBehaviour
         if(other.name == "player")
         {
             InContact = true;
-            //gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Ekey = Instantiate(EkeyPrefab, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z), new Quaternion());
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -26,7 +28,7 @@ public class ResourceCollector : MonoBehaviour
         if (collision.name == "player")
         {
             InContact = false;
-            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            Destroy(Ekey);
         }
     }
 

@@ -117,3 +117,5 @@ MonoBehaviour:
   InvObj: {fileID: 7521412521103609740, guid: 260eadf336e7b1e488d2bba901d3c63e, type: 3}
   inv: {fileID: 0}
   InContact: 0
+  EkeyPrefab: {fileID: 4969653078023668218, guid: 5f0805019d0f9b046a1ae1117b7d388a, type: 3}
+  Ekey: {fileID: 0}

@@ -101,6 +101,8 @@ MonoBehaviour:
   InvObj: {fileID: 261237226942757785, guid: 2e3b206efde8de242878d99ce9358e33, type: 3}
   inv: {fileID: 0}
   InContact: 0
+  EkeyPrefab: {fileID: 4969653078023668218, guid: 5f0805019d0f9b046a1ae1117b7d388a, type: 3}
+  Ekey: {fileID: 0}
 --- !u!58 &6441960582276799186
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -114,6 +116,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000023841858, y: 1.3230991}
+  m_Offset: {x: 0.08341699, y: 1.3230994}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 2.9726925
