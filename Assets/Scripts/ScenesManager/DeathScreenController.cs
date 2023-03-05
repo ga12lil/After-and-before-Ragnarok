@@ -11,6 +11,8 @@ public class DeathScreenController : MonoBehaviour
 
     void Start()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
         string message = "You died!";
         deathMessage.text = message;
     }
