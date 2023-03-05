@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
             Damage(maxHealth / secondsToEmptyHealth * Time.deltaTime);
 
             if (curHealth <= 0)
-                SceneManager.LoadScene("DeathScrene");
+                SceneManager.LoadScene("DeathScreen");
         }
     }
 
