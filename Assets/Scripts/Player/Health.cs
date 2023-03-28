@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     public float curHealth = 0;
     public float maxHealth = 100;
 
-    private float secondsToEmptyHealth = 10f;
+    [SerializeField] private float secondsToEmptyHealth = 10f;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class Health : MonoBehaviour
             Damage(maxHealth / secondsToEmptyHealth * Time.deltaTime);
 
             if (curHealth <= 0)
-                Debug.Log("Death");
+                SceneManager.LoadScene("DeathScreen");
         }
     }
 

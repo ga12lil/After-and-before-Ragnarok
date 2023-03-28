@@ -7,7 +7,7 @@ public class Food : MonoBehaviour
     public float curFood = 0;
     public float maxFood = 180;
 
-    private float secondsToEmptyFood = 100f;
+    [SerializeField] private float secondsToEmptyFood = 100f;
 
     void Start()
     {
@@ -31,8 +31,8 @@ public class Food : MonoBehaviour
 
     public void Hunger(float food)
     {
+        curFood -= food;
         if (curFood < 0)
             curFood = 0;
-        curFood -= food;
     }
 }
