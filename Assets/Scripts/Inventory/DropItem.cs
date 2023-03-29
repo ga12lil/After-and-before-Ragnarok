@@ -17,7 +17,8 @@ public class DropItem : MonoBehaviour, IDropHandler
         {
             Instantiate(eventData.pointerDrag.GetComponent<Item>().OriginalItem, player.transform.position+(Camera.main.ScreenToWorldPoint(Input.mousePosition)-player.transform.position).normalized*5f , new Quaternion());
         }
-        //new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x-playerSpawner.transform.position.x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y-playerSpawner.transform.position.y
+
+        
         //Instantiate(eventData.pointerDrag.GetComponent<Item>().OriginalItem, new Vector3(playerSpawner.transform.position.x, playerSpawner.transform.position.y,0), new Quaternion());
     }
 }

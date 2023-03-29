@@ -2396,7 +2396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400830919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.08, y: -3.27, z: 0}
+  m_LocalPosition: {x: 0.04, y: 0.8, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5159,7 +5159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inv: {fileID: 509093376}
-  playerSpawner: {fileID: 400830919}
+  player: {fileID: 2040933197}
 --- !u!114 &661230651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17077,6 +17077,38 @@ PrefabInstance:
     - target: {fileID: 529826136631511705, guid: d2798222058853043a9b3a84d80398ab, type: 3}
       propertyPath: m_Name
       value: Verstak
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[1].x
+      value: -4.8942795
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 1.977987
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[2].x
+      value: -3.8851871
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[2].y
+      value: 1.9807675
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[3].x
+      value: -2.1012125
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[3].y
+      value: 2.0331626
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[4].x
+      value: 4.5039706
+      objectReference: {fileID: 0}
+    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: m_Points.Array.data[4].y
+      value: 2.1061099
       objectReference: {fileID: 0}
     - target: {fileID: 529826136631511707, guid: d2798222058853043a9b3a84d80398ab, type: 3}
       propertyPath: m_RootOrder
