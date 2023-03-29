@@ -17078,38 +17078,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verstak
       objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[1].x
-      value: -4.8942795
-      objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[1].y
-      value: 1.977987
-      objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[2].x
-      value: -3.8851871
-      objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[2].y
-      value: 1.9807675
-      objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[3].x
-      value: -2.1012125
-      objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[3].y
-      value: 2.0331626
-      objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[4].x
-      value: 4.5039706
-      objectReference: {fileID: 0}
-    - target: {fileID: 529826136631511706, guid: d2798222058853043a9b3a84d80398ab, type: 3}
-      propertyPath: m_Points.Array.data[4].y
-      value: 2.1061099
-      objectReference: {fileID: 0}
     - target: {fileID: 529826136631511707, guid: d2798222058853043a9b3a84d80398ab, type: 3}
       propertyPath: m_RootOrder
       value: 1
