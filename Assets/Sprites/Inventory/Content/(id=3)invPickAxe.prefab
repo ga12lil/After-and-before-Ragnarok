@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4973fc1e29f09704b9a95879cd134935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eq: {fileID: 5088381982651369422}
   id: 3
   MaxInStack: 1
   Count: 0
