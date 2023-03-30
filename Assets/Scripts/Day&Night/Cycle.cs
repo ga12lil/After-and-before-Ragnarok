@@ -6,8 +6,9 @@ public class Cycle : MonoBehaviour
 {
     public Light mainLight;
     public Light playerLight;
-    public int time = 0;
+    public int time = 2000;
     public int dayLong = 12000;
+    public int nightLong = 3000;
     void Start()
     {
         
@@ -16,12 +17,17 @@ public class Cycle : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(time == 6000)
+        
+        if(time >= dayLong+nightLong)
         {
             time = 0;
         }
 
-        mainLight.intensity = Mathf.Sin(time * Mathf.PI / dayLong);
+        if (time < dayLong)
+        {
+            mainLight.intensity = Mathf.Sin(time * Mathf.PI / dayLong);
+            playerLight.intensity = (1 - mainLight.intensity) / 2;
+        }
         time++;
     }
 }
