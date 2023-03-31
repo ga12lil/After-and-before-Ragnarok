@@ -20,10 +20,7 @@ public class Health : MonoBehaviour
         Food food = gameObject.GetComponentInParent(typeof(Food)) as Food;
         if ((food.curFood <= 0) && (curHealth > 0))
         {
-            Damage(maxHealth / secondsToEmptyHealth * Time.deltaTime);
-
-            if (curHealth <= 0)
-                SceneManager.LoadScene("DeathScreen");
+            TakeDamage(maxHealth / secondsToEmptyHealth * Time.deltaTime);
         }
     }
 
@@ -34,10 +31,13 @@ public class Health : MonoBehaviour
             curHealth = maxHealth;
     }
 
-    public void Damage(float damage)
+    public void TakeDamage(float damage)
     {
         curHealth -= damage;
-        if (curHealth < 0)
+        if (curHealth <= 0)
+        {
             curHealth = 0;
+            SceneManager.LoadScene("DeathScreen");
+        }
     }
 }
