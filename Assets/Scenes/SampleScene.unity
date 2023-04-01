@@ -15802,7 +15802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839965551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.31, y: 2.52, z: -0.09015198}
+  m_LocalPosition: {x: -10.53, y: 1.42, z: -0.09015198}
   m_LocalScale: {x: 0.1923715, y: 0.1923715, z: 0.1923715}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15860,7 +15860,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &1839965557
 Animator:
   serializedVersion: 4
@@ -17306,7 +17306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040933197}
   m_LocalRotation: {x: 0.004363274, y: 0, z: 0, w: 0.9999905}
-  m_LocalPosition: {x: 0.046, y: 0.8, z: 0.01}
+  m_LocalPosition: {x: -1.91, y: 1.45, z: 0.01}
   m_LocalScale: {x: 0.4065711, y: 0.39530003, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18154,17 +18154,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4137229791946566882, guid: 14816696e7bdd4249bb5fe55fede56b6, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4137229791946566883, guid: 14816696e7bdd4249bb5fe55fede56b6, type: 3}
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4137229791946566883, guid: 14816696e7bdd4249bb5fe55fede56b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.31
+      value: -10.53
       objectReference: {fileID: 0}
     - target: {fileID: 4137229791946566883, guid: 14816696e7bdd4249bb5fe55fede56b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.52
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 4137229791946566883, guid: 14816696e7bdd4249bb5fe55fede56b6, type: 3}
       propertyPath: m_LocalPosition.z
