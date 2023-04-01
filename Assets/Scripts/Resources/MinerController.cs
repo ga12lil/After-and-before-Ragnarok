@@ -12,7 +12,7 @@ public class MinerController : MonoBehaviour
     public bool CanMine;
     public List<GameObject> FarmRes;
     public GameObject Miner;
-    
+    private Animator anim;
 
     public void Awake()
     {
@@ -42,6 +42,7 @@ public class MinerController : MonoBehaviour
             {
                 if(NeedDamage <= eq.Damage)
                 {
+                    
                     Miner.SetActive(true);
                     HP-= eq.Damage;
                 }
