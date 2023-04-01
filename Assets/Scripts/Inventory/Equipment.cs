@@ -12,13 +12,16 @@ public enum ItemClass
 }
 public class Equipment : MonoBehaviour
 {
+    
     public ItemClass itemClass;
     public float Damage = 0;
     public int MaxDurability = 100;
-    public int CurrDurability;
+    public float CurrDurability;
 
     private void Start()
     {
         CurrDurability = MaxDurability;
     }
+    
+    
 }

@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 5619086160572065964}
   - component: {fileID: 629604939349001775}
   - component: {fileID: -2297783196836762946}
-  - component: {fileID: 5088381982651369422}
+  - component: {fileID: 5804109598165927552}
   m_Layer: 5
-  m_Name: (id=3)invPickAxe
+  m_Name: (id=7)invTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7a68bc1b98aaceb4aac644c7d266e458, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a4ad4a1d68ff4844b0dad19f5be1978, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -172,12 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4973fc1e29f09704b9a95879cd134935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eq: {fileID: 5088381982651369422}
-  id: 3
+  eq: {fileID: 5804109598165927552}
+  id: 7
   MaxInStack: 1
   Count: 0
   invOrder: 0
-  OriginalItem: {fileID: 6790671017949746951, guid: 895c8be7de79b6247bbac23f02a4db8e, type: 3}
+  OriginalItem: {fileID: 6790671017949746951, guid: 302504a995fc07f4aa1f50d4ed41a297, type: 3}
 --- !u!225 &-2297783196836762946
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &5088381982651369422
+--- !u!114 &5804109598165927552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35dc119f1a814347b5f5989ac48e3b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemClass: 2
+  itemClass: 3
   Damage: 5
   MaxDurability: 100
   CurrDurability: 0

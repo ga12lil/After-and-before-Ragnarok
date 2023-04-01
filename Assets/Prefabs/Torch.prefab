@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9044103095190546250}
   - component: {fileID: 4300643406079562277}
   m_Layer: 0
-  m_Name: Spear
+  m_Name: Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6790671017949746951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.97, y: -0.91, z: 0}
-  m_LocalScale: {x: 0.16723424, y: 0.18088423, z: 0.65}
+  m_LocalScale: {x: 0.15437007, y: 0.16697007, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d4783fffaedd324fbda7cf31ec894e0, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e98503e426c560d419f1ebb5168ab1bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a4ad4a1d68ff4844b0dad19f5be1978, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.081548475, y: 0}
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 7
 --- !u!114 &4300643406079562277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0a465a131b500418951055e433d0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InvObj: {fileID: 7521412521103609740, guid: 5f2b6825e96231b41a22305c54993a57, type: 3}
+  InvObj: {fileID: 7521412521103609740, guid: 801549372096f374fb06e081ee280a62, type: 3}
   inv: {fileID: 0}
   InContact: 0
   EkeyPrefab: {fileID: 4969653078023668218, guid: 5f0805019d0f9b046a1ae1117b7d388a, type: 3}

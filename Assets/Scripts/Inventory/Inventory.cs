@@ -105,6 +105,7 @@ public class Inventory : MonoBehaviour
             list[ItemOrder] = null;
         else if (ItemOrder == -1)
             InHand = null;
+        invUI.UpdateInv();
     }
 
 
@@ -169,5 +170,19 @@ public class Inventory : MonoBehaviour
         }
         Debug.Log(minOrder);
         return minOrder;
+    }
+    
+    void FixedUpdate()
+    {
+        if (InHand.id == 7)
+        {
+            if (InHand.eq.CurrDurability - 0.5f <= 0)
+            {
+                InHand.eq.CurrDurability -= 0.5f;
+                invUI.UpdateInv();
+            }
+            else InHand.eq.CurrDurability -= 0.5f;
+        }
+
     }
 }
