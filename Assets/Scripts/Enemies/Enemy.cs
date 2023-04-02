@@ -1,63 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform player;
-    public float aggroDistance = 3f;
-    public float attackCooldown = 2f;
-    public int damage = 10;
-
-    public float rotationSpeed = 5f;
-
-    private bool isAggroed = false;
-    private float lastAttackTime = 0f;
-    private Health playerHealth;
     private Animator animator;
+    private AIPath aiPath;
 
     void Start()
     {
-        playerHealth = player.GetComponent<Health>();
         animator = GetComponent<Animator>();
+        aiPath = GetComponent<AIPath>();
     }
 
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-
-        if (!isAggroed && distanceToPlayer < aggroDistance)
+        if (aiPath.velocity.magnitude > 0)
         {
-            isAggroed = true;
-            Debug.Log("isAggroed = true");
+            Debug.Log("IsMoving true");
+            animator.SetBool("IsMoving", true);
         }
-        else if ((isAggroed && distanceToPlayer > aggroDistance) || !isAggroed)
+        else
         {
-            isAggroed = false;
-            StopAttacking();
-            Debug.Log("isAggroed = false");
+            Debug.Log("IsMoving false");
+            animator.SetBool("IsMoving", false);
         }
-
-        if (isAggroed && Time.time > lastAttackTime + attackCooldown)
-        {
-            AttackPlayer();
-            lastAttackTime = Time.time;
-
-            //transform.right = player.position - transform.position;
-        }
-    }
-
-    void AttackPlayer()
-    {
-        if (playerHealth != null)
-        {
-            playerHealth.TakeDamage(damage);
-            animator.SetBool("IsAttacking", true);
-        }
-    }
-
-    void StopAttacking()
-    {
-        animator.SetBool("IsAttacking", false);
     }
 }

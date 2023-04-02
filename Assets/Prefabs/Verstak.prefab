@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 529826136631511706}
   - component: {fileID: 6210061207369674319}
   - component: {fileID: -5311240982627532457}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Verstak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
