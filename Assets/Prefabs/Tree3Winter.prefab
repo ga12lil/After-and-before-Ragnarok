@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4682351794245393625}
   - component: {fileID: 3833615964661622291}
   - component: {fileID: 4185406274029967361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tree3Winter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
