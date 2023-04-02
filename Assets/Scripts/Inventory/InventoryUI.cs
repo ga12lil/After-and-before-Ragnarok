@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+    public GameObject Torch;
     public Inventory inv;
     public GameObject HandSlot;
     private Animator anim;
@@ -14,7 +15,7 @@ public class InventoryUI : MonoBehaviour
 
     public void UpdateInv()
     {
-        
+
         for(int i =0; i < 10; i++)
         {
             if (inv.list[i] == null)
@@ -29,8 +30,16 @@ public class InventoryUI : MonoBehaviour
             inv.InHand.gameObject.transform.localPosition = new Vector3(0, 0, 0);
             inv.InHand.gameObject.transform.localScale = inv.InHand.transform.localScale;
             anim.SetBool("InHand", true);
+            if (inv.InHand.id==7) {Torch.SetActive(true);}
         }
-        else { anim.SetBool("InHand", false); }
+        else
+        {
+            anim.SetBool("InHand", false);
+            Torch.SetActive(false);
+            
+        }
+        
+        
     }
 
     

@@ -9,6 +9,7 @@ public class ResourceCollector : MonoBehaviour
     public bool InContact = false;
     public GameObject EkeyPrefab;
     public GameObject Ekey;
+    public float Durability;
     
 
     private void Start()

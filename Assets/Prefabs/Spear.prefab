@@ -119,3 +119,4 @@ MonoBehaviour:
   InContact: 0
   EkeyPrefab: {fileID: 4969653078023668218, guid: 5f0805019d0f9b046a1ae1117b7d388a, type: 3}
   Ekey: {fileID: 0}
+  Durability: 100

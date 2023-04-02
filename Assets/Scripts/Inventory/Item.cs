@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Item : MonoBehaviour, IEndDragHandler, IDragHandler , IBeginDragHandler
 {
+    public Equipment eq;
     public int id;
     public int MaxInStack;
     public int Count;
@@ -24,7 +25,11 @@ public class Item : MonoBehaviour, IEndDragHandler, IDragHandler , IBeginDragHan
         cg = gameObject.GetComponent<CanvasGroup>();
     }
     
-
+    void FixedUpdate()
+    {
+        if(eq.CurrDurability<=0)
+            DestroyItem();
+    }
     void Update()
     {
         if (Count > 1)
