@@ -10,7 +10,7 @@ public class MoveController : MonoBehaviour
     bool LookRight = true;
     public PlayerAnimController ac;
     bool IsRun = false;
-    public GameObject MinerA;
+    
     // Start is called before the first frame update
     void Start()
     {

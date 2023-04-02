@@ -176,12 +176,12 @@ public class Inventory : MonoBehaviour
     {
         if (InHand.id == 7)
         {
-            if (InHand.eq.CurrDurability - 0.5f <= 0)
+            if (InHand.eq.CurrDurability - 0.016f <= 0)
             {
-                InHand.eq.CurrDurability -= 0.5f;
+                InHand.eq.CurrDurability -= 0.016f;
                 invUI.UpdateInv();
             }
-            else InHand.eq.CurrDurability -= 0.5f;
+            else InHand.eq.CurrDurability -= 0.016f;
         }
 
     }
