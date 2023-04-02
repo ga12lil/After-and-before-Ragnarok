@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScenesLoader : MonoBehaviour
 {
+    public CraftMenu craftMenu;
     public void LoadScene(int SceneNum)
     {
         SceneManager.LoadScene(SceneNum);
@@ -19,7 +20,11 @@ public class ScenesLoader : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                LoadScene(0);
+                if (craftMenu.FlagOpenCraftMenu)
+                {
+                    craftMenu.CloseCraftMenu();
+                }
+                else LoadScene(0);
             }
         }
     }
