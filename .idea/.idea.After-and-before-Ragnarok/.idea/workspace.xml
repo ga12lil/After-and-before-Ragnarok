@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Craft/ContactVerstak.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -82,7 +85,7 @@
       <workItem from="1680087722372" duration="5203000" />
       <workItem from="1680175370694" duration="6395000" />
       <workItem from="1680331245096" duration="1398000" />
-      <workItem from="1680421004182" duration="2742000" />
+      <workItem from="1680421004182" duration="5518000" />
     </task>
     <servers />
   </component>

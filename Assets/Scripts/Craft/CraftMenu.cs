@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CraftMenu : MonoBehaviour
 {
-
+    public bool ContactVerstak = false;
     public GameObject craftmenu;
     public GameObject toolsmenu;
     public GameObject weaponsmenu;
@@ -40,6 +40,8 @@ public class CraftMenu : MonoBehaviour
         }
     }
 
+   
+    
     public void OpenCraftMenu()
     {
         if (!FlagOpenCraftMenu)
@@ -160,7 +162,7 @@ public class CraftMenu : MonoBehaviour
 
     public void OpenOthersMenu()
     {
-        if (!FlagOpenWeaponsMenu)
+        if (!FlagOpenOthersMenu)
         {
             toolsmenu.SetActive(false);
             weaponsmenu.SetActive(false);
