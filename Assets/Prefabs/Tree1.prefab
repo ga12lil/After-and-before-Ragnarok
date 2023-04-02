@@ -128,7 +128,7 @@ MonoBehaviour:
   inv: {fileID: 0}
   NeedEquip: 1
   NeedDamage: 10
-  HP: 5000
+  HP: 1000
   Contact: 0
   CanMine: 0
   FarmRes:
