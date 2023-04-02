@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 529826136631511706}
   - component: {fileID: 6210061207369674319}
   - component: {fileID: -5311240982627532457}
+  - component: {fileID: 7962843207039132561}
   m_Layer: 3
   m_Name: Verstak
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 529826136631511705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.94, y: 1.6733, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.29999998, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,7 +133,7 @@ BoxCollider2D:
   m_Offset: {x: 0.020366669, y: 0.9767301}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49231648, y: 0.2907154}
     oldSize: {x: 16, y: 12}
     newSize: {x: 10, y: 10}
     adaptiveTilingThreshold: 0.5
@@ -159,3 +160,16 @@ MonoBehaviour:
   InContact: 0
   EkeyPrefab: {fileID: 4969653078023668218, guid: 5f0805019d0f9b046a1ae1117b7d388a, type: 3}
   Ekey: {fileID: 0}
+  Durability: 0
+--- !u!114 &7962843207039132561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529826136631511705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a81cf28af4a494e91e4a3a92b4f4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

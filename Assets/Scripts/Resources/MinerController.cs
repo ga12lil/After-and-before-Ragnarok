@@ -11,13 +11,13 @@ public class MinerController : MonoBehaviour
     public bool Contact;
     public bool CanMine;
     public List<GameObject> FarmRes;
-    public GameObject Miner;
+    public Animator animPlayer;
     private Animator anim;
 
     public void Awake()
     {
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
-        Miner = GameObject.Find("player").GetComponent<MoveController>().MinerA;
+        animPlayer = GameObject.Find("player").GetComponent<Animator>();
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -43,7 +43,10 @@ public class MinerController : MonoBehaviour
                 if(NeedDamage <= eq.Damage)
                 {
                     
-                    Miner.SetActive(true);
+                    if (eq.itemClass==ItemClass.Axe)
+                        animPlayer.SetBool("DobychaTopor",true);
+                    else
+                        animPlayer.SetBool("DobychaKirka",true);
                     HP-= eq.Damage;
                 }
             }
@@ -51,14 +54,16 @@ public class MinerController : MonoBehaviour
     }
     public void OnMouseUp()
     {
-        Miner.SetActive(false);
+        animPlayer.SetBool("DobychaTopor",false);
+        animPlayer.SetBool("DobychaKirka",false);
     }
     
     public void FixedUpdate()
     {
         if(HP <= 0)
         {
-            Miner.SetActive(false);
+            animPlayer.SetBool("DobychaTopor",false);
+            animPlayer.SetBool("DobychaKirka",false);
             System.Random rand = new System.Random();
             foreach (var i in FarmRes)
             {
