@@ -13159,7 +13159,7 @@ GameObject:
   - component: {fileID: 1330278266}
   m_Layer: 5
   m_Name: ButtonAxe
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17978,7 +17978,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1330278261}
     - target: {fileID: 7962843207039132561, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: Buttonaxe
+      value: 
+      objectReference: {fileID: 1330278261}
+    - target: {fileID: 7962843207039132561, guid: d2798222058853043a9b3a84d80398ab, type: 3}
       propertyPath: ButtonAxe2
+      value: 
+      objectReference: {fileID: 789998561}
+    - target: {fileID: 7962843207039132561, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: Buttonaxe2
       value: 
       objectReference: {fileID: 789998561}
     - target: {fileID: 7962843207039132561, guid: d2798222058853043a9b3a84d80398ab, type: 3}
@@ -17986,7 +17994,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 444029675}
     - target: {fileID: 7962843207039132561, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: Buttonspear
+      value: 
+      objectReference: {fileID: 444029675}
+    - target: {fileID: 7962843207039132561, guid: d2798222058853043a9b3a84d80398ab, type: 3}
       propertyPath: ButtonPickAxe
+      value: 
+      objectReference: {fileID: 1876717549}
+    - target: {fileID: 7962843207039132561, guid: d2798222058853043a9b3a84d80398ab, type: 3}
+      propertyPath: Buttonpickaxe
       value: 
       objectReference: {fileID: 1876717549}
     m_RemovedComponents: []
