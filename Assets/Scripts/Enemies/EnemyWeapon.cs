@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class EnemyWeapon : MonoBehaviour
 {
-    public int attackDamage = 10;
+    public int attackDamage = 5;
     public Vector3 attackOffset;
     public float attackRange = 2f;
     public LayerMask attackMask;
@@ -29,6 +29,7 @@ public class EnemyWeapon : MonoBehaviour
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
 
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(pos, attackRange);
     }
 }

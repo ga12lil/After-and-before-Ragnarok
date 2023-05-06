@@ -5,10 +5,9 @@ using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform player;
-
     [SerializeField] private float aggroDistance = 20f;
 
+    private Transform player;
     private Animator animator;
     private AIPath aiPath;
     private float maxSpeed;
@@ -23,6 +22,7 @@ public class Enemy : MonoBehaviour
         maxSpeed = aiPath.maxSpeed;
         seeker = GetComponent<Seeker>();
         spawnPosition = transform.position;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         InvokeRepeating("UpdatePath", 0f, 0.5f);
     }
 
