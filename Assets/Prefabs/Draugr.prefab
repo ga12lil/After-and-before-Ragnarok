@@ -230,7 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1ea097079c07649a356860d0633fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   aggroDistance: 20
 --- !u!114 &5857063756420441392
 MonoBehaviour:
@@ -280,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inv: {fileID: 0}
   NeedEquip: 0
-  attackDelay: 5
-  NeedDamage: 0
+  attackDelay: 1
   HP: 100
   attackCursorTexture: {fileID: 2800000, guid: e98503e426c560d419f1ebb5168ab1bc, type: 3}
+  takeDamage: 0

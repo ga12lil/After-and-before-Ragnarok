@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class rightClickToUse : MonoBehaviour
+public class rightClickToUse : MonoBehaviour, IPointerClickHandler
 {
     public Inventory inv;
     public Food food;
@@ -16,14 +17,24 @@ public class rightClickToUse : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(1))
+    //    {
+    //        inv.RemoveItemFromInventory(gameObject.GetComponent<Item>(), 1);
+    //        food.Feed(20);
+    //        health.Heal(5);
+    //    }
+    //}
+    public void OnPointerClick(PointerEventData eventData)
     {
-        if (Input.GetMouseButtonDown(1))
+        if (eventData.button == PointerEventData.InputButton.Right)
         {
             inv.RemoveItemFromInventory(gameObject.GetComponent<Item>(), 1);
             food.Feed(20);
             health.Heal(5);
         }
     }
-    
+
+
 }

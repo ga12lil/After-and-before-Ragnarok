@@ -17032,8 +17032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inv: {fileID: 0}
   NeedEquip: 0
-  attackDelay: 5
-  NeedDamage: 0
+  attackDelay: 1
   HP: 100
   attackCursorTexture: {fileID: 0}
   takeDamage: 0
