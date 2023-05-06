@@ -10,6 +10,7 @@ public class boarMoves : MonoBehaviour
     bool Run = false;
     public PlayerAttack playerAttack;
     bool LookRight = true;
+    bool IsTriggerGround = false;
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -22,10 +23,11 @@ public class boarMoves : MonoBehaviour
             SetRunAnim();
             playerAttack.takeDamage = false;
         }
-        if (Run)
+        if (Run && !IsTriggerGround)
         {
             float xForce = Random.Range(0.1f, 1f);
             float yForce = Random.Range(0.1f, 1f);
+            
             if (player.transform.position.x > transform.position.x)
             {
                 xForce *= -1;
@@ -63,4 +65,23 @@ public class boarMoves : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Ground")
+        {
+            IsTriggerGround = true;
+            Debug.Log("Out!!!!!!!!!!!!!!!!!");
+            SetStayAnim();
+        }
+    }
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Ground")
+        {
+            IsTriggerGround = true;
+            Debug.Log("Out!!!!!!!!!!!!!!!!!");
+            SetStayAnim();
+        }
+    }
+    
 }
