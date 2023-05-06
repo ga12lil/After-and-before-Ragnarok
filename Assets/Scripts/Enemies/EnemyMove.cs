@@ -5,8 +5,8 @@ using Pathfinding;
 
 public class EnemyMove : StateMachineBehaviour
 {
-    public float attackRange = 3f;
-    public int damage = 10;
+    [SerializeField] private float attackRange = 3f;
+    [SerializeField] private float attackAnimationSpeed = 0.2f;
 
     Transform player;
     private SpriteRenderer sprite;
@@ -30,12 +30,14 @@ public class EnemyMove : StateMachineBehaviour
 
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
+            animator.speed = attackAnimationSpeed;
             animator.SetTrigger("Attack");
         }
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.speed = 1f;
         animator.ResetTrigger("Attack");
     }
 }
