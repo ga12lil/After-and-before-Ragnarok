@@ -47,7 +47,7 @@ public class MinerController : MonoBehaviour
                         animPlayer.SetBool("DobychaTopor",true);
                     else
                         animPlayer.SetBool("DobychaKirka",true);
-                    HP-= eq.Damage;
+                    HP-= eq.Damage*Time.deltaTime;
                 }
             }
         }

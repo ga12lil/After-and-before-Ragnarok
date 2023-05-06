@@ -128,7 +128,7 @@ MonoBehaviour:
   inv: {fileID: 0}
   NeedEquip: 1
   NeedDamage: 10
-  HP: 1000
+  HP: 100
   Contact: 0
   CanMine: 0
   FarmRes:
@@ -136,7 +136,7 @@ MonoBehaviour:
   - {fileID: 7325020640018333052, guid: d1adf3c879e6dba49b823306b710c8db, type: 3}
   - {fileID: 7325020640018333052, guid: d1adf3c879e6dba49b823306b710c8db, type: 3}
   - {fileID: 218242740615467232, guid: 1649489ddd9e4594a982fdef1535cd19, type: 3}
-  Miner: {fileID: 0}
+  animPlayer: {fileID: 0}
   cursorTexture: {fileID: 2800000, guid: ec5250886052bd14b8e87b8eff0d63b6, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
