@@ -16,6 +16,8 @@ public class PlayerAttack : MonoBehaviour
     private Animator animPlayer;
     private SpriteRenderer enemySprite;
 
+    public List<GameObject> FarmRes;
+
     public void Awake()
     {
         enemySprite = GetComponent<SpriteRenderer>();
@@ -60,6 +62,13 @@ public class PlayerAttack : MonoBehaviour
     {
         if (HP <= 0)
         {
+            System.Random rand = new System.Random();
+            foreach (var i in FarmRes)
+            {
+                int randX = rand.Next(-3, 3);
+                int randY = rand.Next(-3, 3);
+                Instantiate(i, new Vector3(gameObject.transform.position.x + randX, gameObject.transform.position.y + randY, gameObject.transform.position.z), new Quaternion());
+            }
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             Destroy(gameObject);
         }
