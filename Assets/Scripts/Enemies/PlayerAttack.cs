@@ -6,18 +6,18 @@ public class PlayerAttack : MonoBehaviour
 {
     public Inventory inv;
     public ItemClass NeedEquip;
-    public float attackDelay = 5f;
-    public float NeedDamage;
-    public float HP;
+    public float attackDelay = 2f;
+    public float HP = 100;
     public Texture2D attackCursorTexture;
 
     private bool Contact;
     private bool isAttacking = false;
     private Animator animPlayer;
-    private Animator anim;
+    private SpriteRenderer enemySprite;
 
     public void Awake()
     {
+        enemySprite = GetComponent<SpriteRenderer>();
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
         animPlayer = GameObject.Find("player").GetComponent<Animator>();
     }
@@ -45,12 +45,9 @@ public class PlayerAttack : MonoBehaviour
             Equipment eq = inv.InHand.gameObject.GetComponent<Equipment>();
             if (NeedEquip == eq.itemClass)
             {
-                if (NeedDamage <= eq.Damage)
+                if (eq.itemClass == ItemClass.Weapon)
                 {
-                    if (eq.itemClass == ItemClass.Axe)
-                    {
-                        StartCoroutine(Attack());
-                    }
+                    StartCoroutine(PlayerAttackCoroutine());
                     HP -= eq.Damage;
                 }
             }
@@ -74,19 +71,13 @@ public class PlayerAttack : MonoBehaviour
             Equipment eq = inv.InHand.gameObject.GetComponent<Equipment>();
             if (NeedEquip == eq.itemClass)
             {
-                if (NeedDamage <= eq.Damage)
-                {
-                    StartCoroutine(DelayedCursorChange());
-                    return;
-                }
+                Cursor.SetCursor(attackCursorTexture, Vector2.zero, CursorMode.Auto);
             }
         }
-    }
-
-    IEnumerator DelayedCursorChange()
-    {
-        yield return new WaitForSeconds(0.2f); // задержка в 0.2 секунды
-        Cursor.SetCursor(attackCursorTexture, Vector2.zero, CursorMode.Auto);
+        else
+        {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
     }
 
     private void OnMouseOver()
@@ -99,11 +90,14 @@ public class PlayerAttack : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
-    IEnumerator Attack()
+    // Имя корутины должны быть уникальным, иначе она дополнительно вызывает функции из других скриптов
+    IEnumerator PlayerAttackCoroutine() 
     {
         isAttacking = true;
+        enemySprite.color = new Color(1f, 0.6914f, 0.6914f); // 177 : 256
         animPlayer.SetTrigger("Attack");
         yield return new WaitForSeconds(attackDelay);
+        enemySprite.color = Color.white;
         isAttacking = false;
     }
 }
