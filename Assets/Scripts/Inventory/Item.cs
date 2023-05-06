@@ -27,8 +27,15 @@ public class Item : MonoBehaviour, IEndDragHandler, IDragHandler , IBeginDragHan
     
     void FixedUpdate()
     {
-        if(eq.CurrDurability<=0)
-            DestroyItem();
+        try
+        {
+            if (eq.CurrDurability <= 0)
+                DestroyItem();
+        }
+        catch
+        {
+
+        }
     }
     void Update()
     {

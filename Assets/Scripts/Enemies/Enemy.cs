@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         if (seeker.IsDone())
         {
             float distanceToPlayer = Vector2.Distance(spawnPosition, player.position);
-            Debug.Log(distanceToPlayer);
+            //Debug.Log(distanceToPlayer);
 
             if (distanceToPlayer > aggroDistance)
             {

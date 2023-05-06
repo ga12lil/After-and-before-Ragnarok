@@ -281,6 +281,6 @@ MonoBehaviour:
   inv: {fileID: 0}
   NeedEquip: 0
   attackDelay: 5
-  NeedDamage: 15
+  NeedDamage: 0
   HP: 100
   attackCursorTexture: {fileID: 2800000, guid: e98503e426c560d419f1ebb5168ab1bc, type: 3}

@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
     private bool isAttacking = false;
     private Animator animPlayer;
     private Animator anim;
+    public bool takeDamage = false;
 
     public void Awake()
     {
@@ -52,6 +53,7 @@ public class PlayerAttack : MonoBehaviour
                         StartCoroutine(Attack());
                     }
                     HP -= eq.Damage;
+                    takeDamage = true;
                 }
             }
         }
@@ -89,10 +91,10 @@ public class PlayerAttack : MonoBehaviour
         Cursor.SetCursor(attackCursorTexture, Vector2.zero, CursorMode.Auto);
     }
 
-    private void OnMouseOver()
-    {
-        OnMouseEnter();
-    }
+    //private void OnMouseOver()
+    //{
+    //    OnMouseEnter();
+    //}
 
     void OnMouseExit()
     {

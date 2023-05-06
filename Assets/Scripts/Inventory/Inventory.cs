@@ -174,15 +174,23 @@ public class Inventory : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (InHand.id == 7)
+        try
         {
-            if (InHand.eq.CurrDurability - 0.016f <= 0)
+            if (InHand.id == 7)
             {
-                InHand.eq.CurrDurability -= 0.016f;
-                invUI.UpdateInv();
+                if (InHand.eq.CurrDurability - 0.016f <= 0)
+                {
+                    InHand.eq.CurrDurability -= 0.016f;
+                    invUI.UpdateInv();
+                }
+                else InHand.eq.CurrDurability -= 0.016f;
             }
-            else InHand.eq.CurrDurability -= 0.016f;
         }
+        catch
+        {
+
+        }
+        
 
     }
 }
