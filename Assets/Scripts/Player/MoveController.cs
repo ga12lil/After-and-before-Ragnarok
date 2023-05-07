@@ -10,6 +10,7 @@ public class MoveController : MonoBehaviour
     bool LookRight = true;
     public PlayerAnimController ac;
     bool IsRun = false;
+    public bool CanMove = true;
     
     // Start is called before the first frame update
     void Start()
@@ -20,31 +21,35 @@ public class MoveController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float dx = Input.GetAxis("Horizontal");
-        float dy = Input.GetAxis("Vertical");
-        if ((LookRight && dx < 0) || (!LookRight && dx>0))
-            Flip();
-        if ((dx != 0 || dy != 0))
+        if (CanMove)
         {
-            if (!IsRun)
+            float dx = Input.GetAxis("Horizontal");
+            float dy = Input.GetAxis("Vertical");
+            if ((LookRight && dx < 0) || (!LookRight && dx > 0))
+                Flip();
+            if ((dx != 0 || dy != 0))
             {
-                ac.SetRunAnim();
-                IsRun = true;
+                if (!IsRun)
+                {
+                    ac.SetRunAnim();
+                    IsRun = true;
+                }
+                if (speed < Maxspeed)
+                    speed += 0.005f;
             }
-            if (speed < Maxspeed)
-                speed += 0.005f;
-        }
-        else
-        {
-            if (IsRun)
+            else
             {
-                ac.SetStayAnim();
-                IsRun = false;
+                if (IsRun)
+                {
+                    ac.SetStayAnim();
+                    IsRun = false;
+                }
+                if (speed > 0)
+                    speed -= 0.005f;
             }
-            if (speed > 0)
-                speed -= 0.005f;
+            player.transform.position = new Vector3(player.transform.position.x + dx * speed, player.transform.position.y + dy * speed, player.transform.position.z);
         }
-        player.transform.position = new Vector3(player.transform.position.x + dx*speed, player.transform.position.y + dy*speed, player.transform.position.z);
+        
     }
     private void Flip()
     {
@@ -52,7 +57,5 @@ public class MoveController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
-
-
     }
 }

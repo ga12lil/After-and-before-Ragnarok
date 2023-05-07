@@ -16,7 +16,7 @@ public class boarMoves : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (playerAttack.takeDamage)
         {
@@ -25,8 +25,8 @@ public class boarMoves : MonoBehaviour
         }
         if (Run && !IsTriggerGround)
         {
-            float xForce = Random.Range(0.1f, 1f);
-            float yForce = Random.Range(0.1f, 1f);
+            float xForce = Random.Range(0.04f, 0.3f);
+            float yForce = Random.Range(0.04f, 0.3f);
             
             if (player.transform.position.x > transform.position.x)
             {
@@ -40,6 +40,23 @@ public class boarMoves : MonoBehaviour
             if (Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2) >= 100)
             {
                 SetStayAnim();
+            }
+        }
+        if(!Run && !IsTriggerGround && (Mathf.Pow(player.transform.position.x - transform.position.x, 2) + Mathf.Pow(player.transform.position.y - transform.position.y, 2) < 100))
+        {
+            float seed = Random.Range(0, 1000);
+            if (seed > 990)
+            {
+                anim.SetBool("isRun", true);
+                float xForce = Random.Range(-1f, 1f);
+                float yForce = Random.Range(-1f, 1f);
+                if ((xForce > 0 && !LookRight) || (xForce < 0 && LookRight))
+                    Flip();
+                transform.position = new Vector3(transform.position.x + xForce, transform.position.y + yForce, transform.position.z);
+            }
+            else
+            {
+                anim.SetBool("isRun", false);
             }
         }
 

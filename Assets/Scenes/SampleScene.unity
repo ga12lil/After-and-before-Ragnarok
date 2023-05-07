@@ -5191,7 +5191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192191634430802127, guid: 6d16efa2c240da4418788aff246cf145, type: 3}
       propertyPath: showNavGraphs
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8192191634430802127, guid: 6d16efa2c240da4418788aff246cf145, type: 3}
       propertyPath: logPathResults
@@ -17092,7 +17092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717543963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.38, y: 25.6, z: 0}
+  m_LocalPosition: {x: 49.87, y: 12.11, z: 0}
   m_LocalScale: {x: -0.4921046, y: 0.48209566, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17131,6 +17131,7 @@ MonoBehaviour:
   HP: 100
   attackCursorTexture: {fileID: 0}
   takeDamage: 0
+  playerMoveController: {fileID: 0}
   FarmRes:
   - {fileID: 7528366155953514885, guid: 73eef835e9305b844872c466e287ca98, type: 3}
   - {fileID: 7528366155953514885, guid: 73eef835e9305b844872c466e287ca98, type: 3}
@@ -20037,6 +20038,7 @@ MonoBehaviour:
   player: {fileID: 2040933197}
   Maxspeed: 0.2
   ac: {fileID: 2040933205}
+  CanMove: 1
 --- !u!114 &2040933205
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,14 +15,17 @@ public class PlayerAttack : MonoBehaviour
     private bool isAttacking = false;
     private Animator animPlayer;
     private SpriteRenderer enemySprite;
+    public MoveController playerMoveController;
 
     public List<GameObject> FarmRes;
 
     public void Awake()
     {
+        GameObject player = GameObject.Find("player");
         enemySprite = GetComponent<SpriteRenderer>();
         inv = GameObject.Find("Inventory").GetComponent<Inventory>();
-        animPlayer = GameObject.Find("player").GetComponent<Animator>();
+        animPlayer = player.GetComponent<Animator>();
+        playerMoveController = player.GetComponent<MoveController>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -104,11 +107,13 @@ public class PlayerAttack : MonoBehaviour
     // Имя корутины должны быть уникальным, иначе она дополнительно вызывает функции из других скриптов
     IEnumerator PlayerAttackCoroutine()
     {
+        //playerMoveController.CanMove = false;
         isAttacking = true;
         enemySprite.color = new Color(1f, 0.6914f, 0.6914f); // 177 : 256
         animPlayer.SetTrigger("Attack");
         yield return new WaitForSeconds(attackDelay);
         enemySprite.color = Color.white;
         isAttacking = false;
+        //playerMoveController.CanMove = true;
     }
 }
