@@ -48,11 +48,15 @@ public class boarMoves : MonoBehaviour
             if (seed > 990)
             {
                 anim.SetBool("isRun", true);
-                float xForce = Random.Range(-1f, 1f);
-                float yForce = Random.Range(-1f, 1f);
-                if ((xForce > 0 && !LookRight) || (xForce < 0 && LookRight))
-                    Flip();
-                transform.position = new Vector3(transform.position.x + xForce, transform.position.y + yForce, transform.position.z);
+                float xForce = Random.Range(-2f, 2f);
+                float yForce = Random.Range(-2f, 2f);
+                if(xForce>1 || yForce > 1)
+                {
+                    if ((xForce > 0 && !LookRight) || (xForce < 0 && LookRight))
+                        Flip();
+                    transform.position = new Vector3(transform.position.x + xForce, transform.position.y + yForce, transform.position.z);
+                }
+                
             }
             else
             {
