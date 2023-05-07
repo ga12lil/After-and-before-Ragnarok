@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public Inventory inv;
     public ItemClass NeedEquip;
-    public float attackDelay = 2f;
+    public float attackDelay = 0.7f;
     public float HP = 100;
     public Texture2D attackCursorTexture;
     public bool takeDamage = false;
