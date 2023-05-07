@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class MinerController : MonoBehaviour
 {
@@ -71,8 +72,11 @@ public class MinerController : MonoBehaviour
                 int randY = rand.Next(-3, 3);
                 Instantiate(i, new Vector3(gameObject.transform.position.x + randX, gameObject.transform.position.y + randY, gameObject.transform.position.z), new Quaternion());
             }
+            Bounds bounds = gameObject.GetComponent<Collider2D>().bounds;
+            AstarPath.active.UpdateGraphs(bounds);
+
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
-            Destroy(gameObject);
+            Destroy(gameObject);      
         }
         
     }
