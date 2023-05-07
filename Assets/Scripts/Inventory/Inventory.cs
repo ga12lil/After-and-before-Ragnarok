@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public Item InArmor;
     public Item InHead;
     public InventoryUI invUI;
+    public GameObject torchLight;
 
     private void Start()
     {
@@ -174,23 +175,20 @@ public class Inventory : MonoBehaviour
     
     void FixedUpdate()
     {
-        try
+        if (InHand != null && InHand.id == 7)
         {
-            if (InHand.id == 7)
+            torchLight.SetActive(true);
+            if (InHand.eq.CurrDurability - 0.016f <= 0)
             {
-                if (InHand.eq.CurrDurability - 0.016f <= 0)
-                {
-                    InHand.eq.CurrDurability -= 0.016f;
-                    invUI.UpdateInv();
-                }
-                else InHand.eq.CurrDurability -= 0.016f;
+                InHand.eq.CurrDurability -= 0.016f;
+                invUI.UpdateInv();
             }
+            else InHand.eq.CurrDurability -= 0.016f;
         }
-        catch
+        else
         {
-
+            torchLight.SetActive(false);
         }
-        
 
     }
 }
