@@ -18,5 +18,9 @@ public class Spawner : MonoBehaviour
             //Instantiate(enemyPrefab, pos, new Quaternion());
             switchTime = false;
         }
+        if (cycle.time < 5)
+        {
+            switchTime = true;
+        }
     }
 }
