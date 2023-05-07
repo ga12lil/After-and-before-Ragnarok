@@ -17129,9 +17129,8 @@ MonoBehaviour:
   NeedEquip: 0
   attackDelay: 1
   HP: 100
-  attackCursorTexture: {fileID: 0}
+  attackCursorTexture: {fileID: 2800000, guid: 7abeb53fb8bbd71458da6d8e2f39f281, type: 3}
   takeDamage: 0
-  playerMoveController: {fileID: 0}
   FarmRes:
   - {fileID: 7528366155953514885, guid: 73eef835e9305b844872c466e287ca98, type: 3}
   - {fileID: 7528366155953514885, guid: 73eef835e9305b844872c466e287ca98, type: 3}
@@ -20037,6 +20036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2040933197}
   Maxspeed: 0.2
+  LookRight: 1
   ac: {fileID: 2040933205}
   CanMove: 1
 --- !u!114 &2040933205

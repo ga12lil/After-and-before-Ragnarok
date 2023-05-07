@@ -281,5 +281,6 @@ MonoBehaviour:
   NeedEquip: 0
   attackDelay: 1
   HP: 100
-  attackCursorTexture: {fileID: 2800000, guid: e98503e426c560d419f1ebb5168ab1bc, type: 3}
+  attackCursorTexture: {fileID: 2800000, guid: 7abeb53fb8bbd71458da6d8e2f39f281, type: 3}
   takeDamage: 0
+  FarmRes: []
