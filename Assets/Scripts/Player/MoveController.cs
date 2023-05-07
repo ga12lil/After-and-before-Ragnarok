@@ -7,7 +7,7 @@ public class MoveController : MonoBehaviour
     public GameObject player;
     public float Maxspeed = 0.2f;
     float speed = 0f;
-    bool LookRight = true;
+    public bool LookRight = true;
     public PlayerAnimController ac;
     bool IsRun = false;
     public bool CanMove = true;
@@ -51,7 +51,7 @@ public class MoveController : MonoBehaviour
         }
         
     }
-    private void Flip()
+    public void Flip()
     {
         LookRight = !LookRight;
         Vector3 Scaler = transform.localScale;
