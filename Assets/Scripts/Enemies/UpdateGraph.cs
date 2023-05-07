@@ -5,9 +5,15 @@ using Pathfinding;
 
 public class UpdateGraph : MonoBehaviour
 {
-    void Update()
+    /*private GridGraph graphToScan;
+    private void Start()
     {
-        var graphToScan = AstarPath.active.data.gridGraph;
-        AstarPath.active.Scan(graphToScan);
+        graphToScan = AstarPath.active.data.gridGraph;
+        InvokeRepeating("ScanGraph", 0.0f, 0.5f);
     }
+
+    void ScanGraph()
+    {
+        AstarPath.active.Scan(graphToScan);
+    }*/
 }
