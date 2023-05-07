@@ -47,7 +47,7 @@ public class PlayerAttack : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (Contact && inv.InHand != null && !isAttacking)
+        if (Contact && inv.InHand != null && !isAttacking && Time.timeScale != 0)
         {
             Equipment eq = inv.InHand.gameObject.GetComponent<Equipment>();
             if (NeedEquip == eq.itemClass)
@@ -86,7 +86,7 @@ public class PlayerAttack : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (Contact && inv.InHand != null && !isAttacking)
+        if (Contact && inv.InHand != null && !isAttacking && Time.timeScale != 0)
         {
             Equipment eq = inv.InHand.gameObject.GetComponent<Equipment>();
             if (NeedEquip == eq.itemClass)
