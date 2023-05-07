@@ -13,14 +13,14 @@ public class CameraController : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    private void Update()
+    /*private void Update()
     {
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
             float zoomAmount = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
             Zoom(zoomAmount);
         }
-    }
+    }*/
 
     public void Zoom(float zoomAmount)
     {

@@ -27,7 +27,7 @@ public class CraftMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Tab))
+        if (Input.GetKeyUp(KeyCode.Tab) && Time.timeScale != 0)
         {
             if (!FlagOpenCraftMenu)
             {

@@ -88,7 +88,7 @@ public class MinerController : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
     void OnMouseEnter()
     {
-        if (Contact && inv.InHand != null)
+        if (Contact && inv.InHand != null && Time.timeScale != 0)
         {
             Equipment eq = inv.InHand.gameObject.GetComponent<Equipment>();
             if (NeedEquip == eq.itemClass)
