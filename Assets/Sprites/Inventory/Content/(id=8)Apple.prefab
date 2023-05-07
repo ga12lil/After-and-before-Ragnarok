@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4674901531f90194ebf24bdc0eb07d9d, type: 3}
     - target: {fileID: 7521412521103609740, guid: 6178b6dee31ec8b4996acf96a9057700, type: 3}
       propertyPath: m_Name
-      value: (id=8)Apple Variant
+      value: (id=8)Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6178b6dee31ec8b4996acf96a9057700, type: 3}
@@ -129,3 +129,5 @@ MonoBehaviour:
   inv: {fileID: 0}
   food: {fileID: 0}
   health: {fileID: 0}
+  HealValue: 5
+  FeedValue: 10

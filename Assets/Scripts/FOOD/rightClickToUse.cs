@@ -8,6 +8,8 @@ public class rightClickToUse : MonoBehaviour, IPointerClickHandler
     public Inventory inv;
     public Food food;
     public Health health;
+    public int HealValue;
+    public int FeedValue;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,24 +17,13 @@ public class rightClickToUse : MonoBehaviour, IPointerClickHandler
         food = GameObject.Find("player").GetComponent<Food>();
         health = GameObject.Find("player").GetComponent<Health>();
     }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(1))
-    //    {
-    //        inv.RemoveItemFromInventory(gameObject.GetComponent<Item>(), 1);
-    //        food.Feed(20);
-    //        health.Heal(5);
-    //    }
-    //}
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             inv.RemoveItemFromInventory(gameObject.GetComponent<Item>(), 1);
-            food.Feed(20);
-            health.Heal(5);
+            food.Feed(FeedValue);
+            health.Heal(HealValue);
         }
     }
 
