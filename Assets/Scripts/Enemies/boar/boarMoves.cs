@@ -13,6 +13,7 @@ public class boarMoves : MonoBehaviour
     bool IsTriggerGround = false;
     void Awake()
     {
+        player = GameObject.Find("player");
         anim = GetComponent<Animator>();
     }
 
@@ -50,7 +51,7 @@ public class boarMoves : MonoBehaviour
                 anim.SetBool("isRun", true);
                 float xForce = Random.Range(-2f, 2f);
                 float yForce = Random.Range(-2f, 2f);
-                if(xForce>1 || yForce > 1)
+                if(xForce>1 || yForce > 1 || xForce < -1 || yForce < -1)
                 {
                     if ((xForce > 0 && !LookRight) || (xForce < 0 && LookRight))
                         Flip();
